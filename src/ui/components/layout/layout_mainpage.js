@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import BackgroundImage from "./bg.jpg";
-import Header from "@/ui/components/header/header";
+import Header_mainpage from "@/ui/components/header/header_mainpage";
 
 
 
@@ -9,7 +9,6 @@ import "@/api/menuresponce";
 import CityPic from '@/../public/pics/city.png';
 import CosmodromePic from '@/../public/pics/cosmodrome.png';
 import "@/api/personsresponce";
-
 import {
     MenuResponceCity,
     MenuResponceCosmodrome,
@@ -68,7 +67,7 @@ const Layout_mainpage = () => {
     return (<>
         <FlexContainer>
             <GridContainer>
-                <HeaderContainer><Header/></HeaderContainer>
+                <HeaderContainer><Header_mainpage/></HeaderContainer>
                 <CosmodromeContainer><MenuColumn resp={MenuResponceCosmodrome} logo={CosmodromePic.src}/></CosmodromeContainer>
                 <CityContainer><MenuColumn resp={MenuResponceCity} logo={CityPic.src}/></CityContainer>
                 <PersonsContainer><MenuColumn resp={MenuResponcePersons}/><Persons_module resp={PersonsResponce}/></PersonsContainer>

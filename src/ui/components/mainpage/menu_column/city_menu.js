@@ -25,9 +25,15 @@ const MenuHeaderLogo = styled.div`
   width: 80px;
 `
 
-const MenuHeader = styled.h2`
+const MenuHeader = styled(Link)`
 font-size: 24px;
 font-family: Natasha;
+  color: white;
+  text-decoration: none;
+  &:hover{
+    color:  #DC2A1E;
+    transition: color 0.3s;
+  }
 `
 const MenuItem = styled(Link)`
 font-family: Arial;
@@ -47,13 +53,12 @@ font-family: Arial;
 `
 
 const MenuColumn = (props) => {
-    console.log(props.resp.header)
-    const showItems = props.resp.items.map((i)=><MenuItem key={i.toString()} href={"/"}>{i}</MenuItem>)
+    const showItems = props.resp.items.map((i)=><MenuItem key={i.header.toString()} href={i.link}>{i.header}</MenuItem>)
     return (
         <Container>
             <MenuHeaderContainer>
                 <MenuHeaderLogo logo={props.logo}/>
-                <MenuHeader>{props.resp.header}</MenuHeader>
+                <MenuHeader href={props.resp.link}>{props.resp.header}</MenuHeader>
             </MenuHeaderContainer>
             {showItems}
         </Container>

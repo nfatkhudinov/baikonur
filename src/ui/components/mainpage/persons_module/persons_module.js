@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import Warning from "@/ui/components/mainpage/persons_module/warning";
+import {randomInt} from "next/dist/shared/lib/bloom-filter/utils";
 
 const PersonModuleContainer = styled.div`
 display: flex;
@@ -58,10 +59,8 @@ const Rank = styled.div`
 
 
 const PersonsModule = ({resp}) => {
-    console.log(resp);
-
-    const ShowPersons = resp.map((i)=>(
-        <Person>
+    const ShowPersons = resp.map((i)=>( //ИСПРАВИТЬ RANDOM
+        <Person key={randomInt(0,200)}>
             <PhotoContainer photo={i.pic}/>
             <TextContainer>
                 <Title>почетный гражданин</Title>

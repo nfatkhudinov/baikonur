@@ -15,7 +15,7 @@ const Logo = styled.div`
     width: 314px;
     height: 36px;
 `
-const Header = () => {
+const Header_mainpage = () => {
     return (
         <HeaderContainer>
             <Link href={"/"}><Logo/></Link>
@@ -23,4 +23,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default Header_mainpage;

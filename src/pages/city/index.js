@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Layout_mainpage from "@/ui/components/layout/layout_mainpage";
 import GlobalStyle from "@/styles/global";
+import Layout_content from "@/ui/components/layout/layout_content";
 
 export default function Home() {
   return (
@@ -13,11 +14,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GlobalStyle/>
-    <Layout_mainpage>
+    <Layout_content>
 
+Content!
 
-
-    </Layout_mainpage>
+    </Layout_content>
     </>
   )
 }
